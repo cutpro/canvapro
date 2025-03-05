@@ -1,61 +1,147 @@
-/*
-Theme Name: Twenty Twenty-Five
-Theme URI: https://wordpress.org/themes/twentytwentyfive/
-Author: the WordPress team
-Author URI: https://wordpress.org
-Description: Twenty Twenty-Five emphasizes simplicity and adaptability. It offers flexible design options, supported by a variety of patterns for different page types, such as services and landing pages, making it ideal for building personal blogs, professional portfolios, online magazines, or business websites. Its templates cater to various blog styles, from text-focused to image-heavy layouts. Additionally, it supports international typography and diverse color palettes, ensuring accessibility and customization for users worldwide.
-Requires at least: 6.7
-Tested up to: 6.7
-Requires PHP: 7.2
-Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: twentytwentyfive
-Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
-*/
-
-/*
- * Link styles
- * https://github.com/WordPress/gutenberg/issues/42319
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
  */
-a {
-	text-decoration-thickness: 1px !important;
-	text-underline-offset: .1em;
+ 
+#salertWrapper .popup_template {
+    background-color: #e0e0e0; 
+    bottom: 20px;
+    border-radius: 0;
+    overflow: hidden;
 }
 
-/* Focus styles */
-:where(.wp-site-blocks *:focus) {
-	outline-width: 2px;
-	outline-style: solid;
+#salertWrapper  .popup_position {
+    position: fixed; 
+    z-index: 99999;
+    width: 250px;
 }
 
-/* Increase the bottom margin on submenus, so that the outline is visible. */
-.wp-block-navigation .wp-block-navigation-submenu .wp-block-navigation-item:not(:last-child) {
-	margin-bottom: 3px;
+#salertWrapper  .popup_position.bottomRight {
+    bottom: 20px;
+    right: 10px;
 }
 
-/* Increase the outline offset on the parent menu items, so that the outline does not touch the text. */
-.wp-block-navigation .wp-block-navigation-item .wp-block-navigation-item__content {
-	outline-offset: 4px;
+#salertWrapper .popup_position.bottomLeft {
+    bottom: 20px;
+    left: 10px;
+}
+#salertWrapper  .popup_position.topRight {
+    top: 20px;
+    right: 10px;
 }
 
-/* Remove outline offset from the submenus, otherwise the outline is visible outside the submenu container. */
-.wp-block-navigation .wp-block-navigation-item ul.wp-block-navigation__submenu-container .wp-block-navigation-item__content {
-	outline-offset: 0;
+#salertWrapper .popup_position.topLeft {
+    top: 20px;
+    left: 10px;
 }
 
-/*
- * Progressive enhancement to reduce widows and orphans
- * https://github.com/WordPress/gutenberg/issues/55190
- */
-h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
-	text-wrap: pretty;
+#salertWrapper figure.circle{
+    max-height: 75px;
+    border-radius: 50%;
+    border: 1px solid #eee;
 }
 
-/*
- * Change the position of the more block on the front, by making it a block level element.
- * https://github.com/WordPress/gutenberg/issues/65934
-*/
-.more-link {
-	display: block;
+#salertWrapper .popup-item {
+    padding: 10px;
+    padding-right: 50px !important;
+    width: 100%; 
+    float: left;
 }
+
+#salertWrapper figure{
+    margin: 0; 
+    width: 75px; 
+    max-height: 65px; 
+    overflow: hidden;
+    float: left;
+}
+
+#salertWrapper .imageOnRight figure{
+    float: right;
+}
+
+#salertWrapper .textOnly  figure{
+   display: none;
+}
+
+
+#salertWrapper figure img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#salertWrapper .salert-content-wrap{
+    width: calc(100% - 85px);    
+    float: right;
+    font-size: 14px;
+    color: #1e1e1e;
+}
+
+#salertWrapper .imageOnRight .salert-content-wrap{
+    float: left;
+}
+
+#salertWrapper .textOnly .salert-content-wrap{
+   width: 100%;
+}
+
+#salertWrapper .salert-content-wrap .t-product{
+    display: block; 
+    font-size: 120%;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+#salertWrapper .salert-content-wrap small{
+    font-size: 70%;
+    font-style: italic;
+}
+ 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Close Button */
+.popup_template .popup-item .btn-close{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #000;
+    font-size: 22px;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    line-height: 12px;
+    z-index: 999999;
+}
+.popup_template .popup-item .close img{
+    max-width: 100%;
+}
+
+@media screen and ( max-width: 767px){
+    #salertWrapper .popup-item{
+        padding: 10px !important;
+    }
+
+    #salertWrapper .popup_position.bottomRight {
+        bottom: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        left: 0 !important;
+    }  
+
+    #salertWrapper .popup_position .salert-content-wrap {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+    } 
+}
+@media screen and ( max-width: 480px){
+    #sale_alertWrapper .popup_position{
+        width: 300px !important;
+    }
+}
+ 

@@ -1,0 +1,509 @@
+/* jQuery Countdown styles 2.0.0. */
+.is-countdown {
+	border: none;
+	background: transparent;
+	height: 40px;
+    padding: 5px;
+}
+.countdown-rtl {
+	direction: rtl;
+}
+
+.countdown-row {
+	clear: both;
+	width: 100%;
+	padding: 0px 2px;
+	text-align: center;
+}
+.countdown-show1 .countdown-section {
+	width: 98%;
+}
+.countdown-show2 .countdown-section {
+	width: 48%;
+}
+.countdown-show3 .countdown-section {
+	width: 32.5%;
+}
+.countdown-show4 .countdown-section {
+	width: 24.5%;
+}
+.countdown-show5 .countdown-section {
+	width: 19.5%;
+}
+.countdown-show6 .countdown-section {
+	width: 16.25%;
+}
+.countdown-show7 .countdown-section {
+	width: 14%;
+}
+.countdown-section {
+	display: block;
+	float: left;
+	font-size: 75%;
+	text-align: center;
+}
+.countdown-amount {
+    font-size: 200%;
+}
+.countdown-period {
+    display: block;
+}
+.countdown-descr {
+	display: block;
+	width: 100%;
+}
+
+
+.wl_countdown .is-countdown {
+  border:0;
+  background:none;
+  padding: 0;
+  margin: 0;
+  height: auto;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+}
+
+.wl_countdown .countdown-row{
+
+  display: flex;
+  display: -ms-flex;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.wl_countdown .is-countdown:after {
+  content:'';
+  width:100%;
+  display:block;
+  clear:both;
+}
+
+.wl_countdown .countdown-section {
+  padding: 15px;
+  position: relative;
+  font-size:inherit;
+  text-align: center;
+  position: relative;
+
+  display: flex;
+  display: -ms-flex;
+  display: -webkit-flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.wl_countdown .countdown-message-container{
+  position: relative;
+  overflow: hidden;
+}
+
+.wl_countdown .countdown-message-container .countdown-message{
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  -ms-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  display: none;
+}
+
+.wl_countdown .countdown-message-container .countdown-message.active{
+
+  display: block;
+}
+
+
+.wl_countdown .is-countdown.fade-out{
+  opacity: 1;
+
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.wl_countdown .is-countdown.countdown-expired.fade-out{
+  opacity: 0;
+  height: 0;
+}
+
+
+
+.wl_countdown .countdown-message-container .countdown-message.effect-fade-in,
+.wl_countdown .countdown-message-container .countdown-message.effect-fade-in.active {
+  opacity: 0;
+}
+
+.wl_countdown .countdown-message-container .countdown-message.effect-fade-in.active.in {
+  opacity: 1;
+}
+
+.wl_countdown.debug_mode .countdown-message-container .countdown-message{
+  opacity: 1 !important;
+  display: block !important;
+  -webkit-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+  transform: none !important;
+}
+
+/* vertical */
+
+.wl_countdown .countdown-message-container .countdown-message.effect-from-bottom {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.wl_countdown .countdown-message-container .countdown-message.effect-from-bottom.active {
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.wl_countdown .countdown-message-container .countdown-message.effect-from-top {
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.wl_countdown .countdown-message-container .countdown-message.effect-from-top.active {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.wl_countdown .countdown-message-container .countdown-message.effect-from-bottom.active.in,
+.wl_countdown .countdown-message-container .countdown-message.effect-from-top.active.in {
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+
+.wl_countdown .is-countdown.up{
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+
+}
+
+.wl_countdown .is-countdown.countdown-expired.up{
+
+  -webkit-transform: translateY(-900px);
+  -ms-transform: translateY(-900px);
+  -o-transform: translateY(-900px);
+  transform: translateY(-900px);
+  height: 0;
+  opacity: 0;
+}
+
+
+.wl_countdown .is-countdown.down{
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+
+}
+
+.wl_countdown .is-countdown.countdown-expired.down{
+
+  -webkit-transform: translateY(900px);
+  -ms-transform: translateY(900px);
+  -o-transform: translateY(900px);
+  transform: translateY(900px);
+  height: 0;
+  opacity: 0;
+}
+
+/* horizontal */
+
+.wl_countdown .countdown-message-container .countdown-message.effect-from-left {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.wl_countdown .countdown-message-container .countdown-message.effect-from-left.active {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.wl_countdown .countdown-message-container .countdown-message.effect-from-right {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.wl_countdown .countdown-message-container .countdown-message.effect-from-right.active {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.wl_countdown .countdown-message-container .countdown-message.effect-from-left.active.in,
+.wl_countdown .countdown-message-container .countdown-message.effect-from-right.active.in {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+
+.wl_countdown .is-countdown.to-left{
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+
+}
+
+.wl_countdown .is-countdown.countdown-expired.to-left{
+
+  -webkit-transform: translateX(-1000px) scale(0.5);
+  -ms-transform: translateX(-1000px) scale(0.5);
+  -o-transform: translateX(-1000px) scale(0.5);
+  transform: translateX(-1000px) scale(0.5);
+  opacity: 0;
+  height: 0;
+}
+
+
+.wl_countdown .is-countdown.to-right{
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+
+}
+
+.wl_countdown .is-countdown.countdown-expired.to-right{
+
+  -webkit-transform: translateX(1000px) scale(0.5);
+  -ms-transform: translateX(1000px) scale(0.5);
+  -o-transform: translateX(1000px) scale(0.5);
+  transform: translateX(1000px) scale(0.5);
+  opacity: 0;
+  height: 0;
+}
+
+
+/* scale */
+
+.wl_countdown .countdown-message-container .countdown-message.effect-scale-up {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+
+.wl_countdown .countdown-message-container .countdown-message.effect-scale-up.active.in {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+/* flip horizontal */
+
+.wl_countdown .countdown-message-container .countdown-message.effect-rotate_y {
+  -webkit-transform: rotateY(-90deg);
+  -ms-transform: rotateY(-90deg);
+  -o-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+  -webkit-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+
+.wl_countdown .countdown-message-container .countdown-message.effect-rotate_y.active.in {
+  -webkit-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
+}
+
+
+/* flip vertical */
+
+.wl_countdown .countdown-message-container .countdown-message.effect-rotate_x {
+  -webkit-transform: rotateX(-90deg);
+  -ms-transform: rotateX(-90deg);
+  -o-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  -o-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+
+.wl_countdown .countdown-message-container .countdown-message.effect-rotate_x.active.in {
+  -webkit-transform: rotateX(0);
+  -ms-transform: rotateX(0);
+  -o-transform: rotateX(0);
+  transform: rotateX(0);
+}
+
+/* rotate */
+
+.wl_countdown .countdown-message-container .countdown-message.effect-rotate_z {
+  -webkit-transform: rotateZ(-90deg) scale(0);
+  -ms-transform: rotateZ(-90deg) scale(0);
+  -o-transform: rotateZ(-90deg) scale(0);
+  transform: rotateZ(-90deg) scale(0);
+}
+
+
+.wl_countdown .countdown-message-container .countdown-message.effect-rotate_z.active.in {
+  -webkit-transform: rotateZ(0) scale(1);
+  -ms-transform: rotateZ(0) scale(1);
+  -o-transform: rotateZ(0) scale(1);
+  transform: rotateZ(0) scale(1);
+}
+
+.wl_countdown .countdown-message-container .countdown-message.effect-rotate_z {
+  -webkit-transition-duration: 0.6s;
+  -ms-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+}
+
+
+.wl_countdown .countdown-period {
+  text-transform:uppercase;
+  display: block;
+}
+
+.wl_countdown:not(.divider_yes) .countdown-section .countdown-amount:before,
+.wl_countdown:not(.divider_yes) .countdown-section .countdown-amount:after,
+.wl_countdown .countdown-section:first-child .countdown-amount:before,
+.wl_countdown .countdown-section:first-child .countdown-amount:after{
+  display: none;
+}
+
+.wl_countdown .countdown-section .countdown-amount:before,
+.wl_countdown .countdown-section .countdown-amount:after{
+  content:'';
+  width: 0.15em;
+  height: 0.15em;
+  background: #333333;
+  border-radius: 50%;
+  display:block;
+  position: absolute;
+  top: 50%;
+  left: -0.075em;
+  margin-top: -0.50em;
+
+}
+
+.wl_countdown .countdown-section .countdown-amount:after {
+  margin-top: -0.15em;
+}
+
+.wl_countdown .countdown-amount {
+  line-height:1;
+  font-size:1.4em;
+  max-width: 100%;
+  margin-bottom: 0.25em;
+  width: 100%;
+  color: inherit;
+  height: auto;
+  border-color: #333333;
+
+  display: flex;
+  display: -ms-flex;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  justify-content: center;
+  align-content: center;
+
+}
+
+@media (min-width:480px) {
+  .wl_countdown .countdown-amount {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    line-height:1;
+    font-size:3em;
+  }
+
+  .wl_countdown .countdown-period {
+    font-size:0.75em;
+  }
+
+}
+@media (min-width:1024px) {
+  .wl_countdown .countdown-amount {
+    line-height:1;
+    font-size:4em;
+
+  }
+
+
+}
+
+
+.wl_countdown.countdown-shape-circle .countdown-amount{
+  border-radius: 100%;
+}
+
+.wl_countdown.countdown-shape-rounded .countdown-amount{
+  border-radius: 10%;
+}
+
+@media (min-width:480px){
+
+  .wl_countdown.countdown-medium .countdown-amount {
+    line-height:1;
+    font-size:3em;
+  }
+
+  .wl_countdown.countdown-medium .countdown-period {
+    font-size:0.75em;
+  }
+
+
+}
+
+.wl_countdown.countdown-small .countdown-amount {
+  padding-top: 0.125em;
+  padding-bottom: 0.125em;
+  line-height:1;
+  font-size:1.4em;
+}
+
+.wl_countdown.countdown-small .countdown-period {
+  font-size: 0.5em;
+}
